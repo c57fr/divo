@@ -1,0 +1,24 @@
+{% set firstname = 'Mon prénom' %}
+{% set arr = arr %}
+
+Salut,
+
+{{ firstname }}.
+<hr>
+<ul>
+  {% for arru in arr %}
+  <li>
+    {{ arru }}
+  </li>
+  {% endfor %}
+</ul>
+
+<hr>
+
+{{ arr | join(', ', ' & ') }}
+
+<hr>
+
+{% block content %}
+  {# Default content #}
+{% endblock %}

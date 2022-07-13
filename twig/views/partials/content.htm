@@ -1,0 +1,17 @@
+{% extends page.htm %}
+
+{% block content %}
+<ul>
+  {% for arru in arr %}
+  <li>
+    {{ arru }}
+  </li>
+  {% endfor %}
+</ul>
+
+<hr>
+
+{{ arr | join(', ', ' & ') }}
+
+<hr>
+{% endblock %}
