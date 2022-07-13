@@ -1,0 +1,48 @@
+#slider {
+  position: relative;
+  background-image: url('nyc.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  width: 400px;
+  height: 200px;
+  overflow: hidden;
+
+  top: 70px;
+  margin: 0 auto;
+
+  border-radius: 10px;
+  box-shadow: -7px 6px 10px rgba(0, 0, 0, 0.4);
+
+  background-image: url('avatar.jpg');
+  animation: myTransition 35s infinite;
+}
+
+@keyframes myTransition {
+  0% {
+    background-image: url('avatar.jpg');
+  }
+
+  20% {
+    background-image: url('trip.jpg');
+  }
+
+  40% {
+    background-image: url('canada.jpg');
+  }
+
+  60% {
+    background-image: url('lake.jpg');
+  }
+
+  80% {
+    background-image: url('nyc.jpg');
+  }
+}
+
+
+.uuu {
+  font-family: lato;
+ color: #003459; 
+}

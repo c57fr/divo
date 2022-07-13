@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwindcss</title>
+  <script>
+    //<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.27.10'><\/script>".replace(
+      "HOST", location.hostname));
+      //]]>
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#f7f',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="font-bold w-64 m-auto mt-5 cardborder-solid border-2 border-black-600 rounded-lg">
+    <div class="card-header round">
+      <img src="avatar.png" alt="photo">
+    </div>
+    <!-- <div class="card-body text-blue-800 p-3"> -->
+    <div class="card-body text-clifford p-3">
+      <h1>Hello world!</h1>
+      <p class="pt-5 font-normal">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    </div>
+  </div>
+  <script src="tailwind.config.js"></script>
+</body>
+
+</html>
