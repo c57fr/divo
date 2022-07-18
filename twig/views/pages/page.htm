@@ -1,10 +1,10 @@
-{% set firstname = 'Mon prénom' %}
-{% set arr = arr %}
+{% extends 'layouts/base.htm' %}
 
-Salut,
+{% block content %}
 
-{{ firstname }}.
+Salut, {{ firstname }}.
 <hr>
+
 <ul>
   {% for arru in arr %}
   <li>
@@ -19,6 +19,5 @@ Salut,
 
 <hr>
 
-{% block content %}
-  {# Default content #}
 {% endblock %}
+

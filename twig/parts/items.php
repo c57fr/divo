@@ -4,4 +4,4 @@
  * (ɔ) Online FORMAPRO - GrCOTE7 -2022.
  */
 
- $apotres = ['Pier', 'Pol', 'Jack'];
+ $items = ['Pier', 'Pol', 'Jack'];
