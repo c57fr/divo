@@ -1,0 +1,23 @@
+{% extends 'layouts/base.htm' %}
+
+{% block content %}
+
+Salut, {{ firstname }}.
+<hr>
+
+<ul>
+  {% for arru in arr %}
+  <li>
+    {{ arru }}
+  </li>
+  {% endfor %}
+</ul>
+
+<hr>
+
+{{ arr | join(', ', ' & ') }}
+
+<hr>
+
+{% endblock %}
+

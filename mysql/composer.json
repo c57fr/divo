@@ -1,0 +1,18 @@
+{
+    "name": "grcote7/mysql",
+    "description": "MySQL use",
+    "autoload": {
+        "psr-4": {
+            "Grcote7\\Twig\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Crea7Net",
+            "email": "l.cote@codeur.online"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.0"
+    }
+}
