@@ -2,22 +2,18 @@
 
 {% block content %}
 
-Salut, {{ firstname }}.
-<hr>
+<h1>Utilisateurs</h1>
 
 <ul>
-  {% for arru in arr %}
+  {% for user in users %}
   <li>
-    {{ arru }}
+    {{ user.id }} {{ user.name|capitalize }}
   </li>
   {% endfor %}
 </ul>
 
 <hr>
 
-{{ arr | join(', ', ' & ') }}
-
 <hr>
 
 {% endblock %}
-
