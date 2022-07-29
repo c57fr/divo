@@ -20,23 +20,31 @@
 
   <?php
 	include_once 'nav.php';
-  include_once 'uri.php';
+
+
+require_once 'db.php';
+
+  $queries = [
+  	//'CREATE TABLE users (id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255) NOT NULL UNIQUE, PRIMARY KEY (id))',
+  	//'INSERT INTO users (name) VALUES ("jcharcosset")',
+  	// your own sql request,
+    'SELECT * from users',
+  ];
+
+  foreach ($queries as $query) {
+  	try {
+  		$statement = $connection->prepare($query);
+  		$statement->execute();
+  	} catch (Exception $e) {
+  		echo 'Erreur : ' . $e->getMessage() . '<br/>';
+  	}
+  }
+  // aff($statement->fetchAll());
+  aff($statement->fetchAll(PDO::FETCH_ASSOC));
   ?>
 
   <main>
-    <h1>Router</h1>
-
-    <?php if ('/' == $uri) {
-    	echo '<h2>Page Accueil</h2>';
-    } else {
-    	if (file_exists($inc)) {
-    		include $inc;
-    	} else {
-    		echo '<p class="err404">ERROR 404</p>';
-    	}
-    }
-	  echo $affUri;
-  ?>
+    <h1>MySQL</h1>
   </main>
 
 </body>

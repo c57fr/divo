@@ -40,13 +40,7 @@ main {
   box-shadow: -2px 3px 10px grey;
   border-radius: 12px;
 }
-
 .ar {
   display: block;
   text-align: right;
-}
-
-.err404 {
-  font-size: 50px;
-  color: rgb(255, 0, 0);
 }

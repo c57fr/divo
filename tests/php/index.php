@@ -18,25 +18,12 @@
 
 <body>
 
-  <?php
-	include_once 'nav.php';
-  include_once 'uri.php';
-  ?>
+  <?php include_once 'nav.php'; ?>
 
   <main>
     <h1>Router</h1>
-
-    <?php if ('/' == $uri) {
-    	echo '<h2>Page Accueil</h2>';
-    } else {
-    	if (file_exists($inc)) {
-    		include $inc;
-    	} else {
-    		echo '<p class="err404">ERROR 404</p>';
-    	}
-    }
-	  echo $affUri;
-  ?>
+    <p>Page Accueil</p>
+    <?php include_once 'uri.php'; ?>
   </main>
 
 </body>
