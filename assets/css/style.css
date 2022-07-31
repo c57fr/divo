@@ -32,6 +32,10 @@ a:hover {
   transition: 1s ease-in-out;
 }
 
+.center {
+  text-align: center;
+}
+
 main {
   background-color: rgba(246, 246, 234, .5);
   margin: 30px 30px;
