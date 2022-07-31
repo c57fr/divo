@@ -32,6 +32,10 @@ a:hover {
   transition: 1s ease-in-out;
 }
 
+.center {
+  text-align: center;
+}
+
 main {
   background-color: rgba(246, 246, 234, .5);
   margin: 30px 30px;
@@ -46,7 +50,13 @@ main {
   text-align: right;
 }
 
-.err404 {
+.err, .err404 {
+  line-height: 1;
   font-size: 50px;
   color: rgb(255, 0, 0);
+}
+.diamond {
+  margin-top: 20px;
+  font-family: monospace, sans-serif;
+  line-height: 0.5;
 }
