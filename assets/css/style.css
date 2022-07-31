@@ -50,10 +50,13 @@ main {
   text-align: right;
 }
 
-.err404 {
+.err, .err404 {
+  line-height: 1;
   font-size: 50px;
   color: rgb(255, 0, 0);
 }
 .diamond {
-  font-family: arial, sans-serif;
+  margin-top: 20px;
+  font-family: monospace, sans-serif;
+  line-height: 0.5;
 }

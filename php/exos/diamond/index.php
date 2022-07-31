@@ -18,7 +18,7 @@
 
 <body>
 
-	<main class="diamond">
+	<main class="diamond center">
 		<?php
 	function aff($var, $txt = null)
 	{
