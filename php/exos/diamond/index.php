@@ -14,6 +14,8 @@
 		//]]>
 	</script>
 	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="icon" href="/favicon.ico" type="image/icon">
+	<link rel="shortcut icon" href="/animated_favicon.gif" type="image/x-icon">
 </head>
 
 <body>
