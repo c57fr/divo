@@ -3,8 +3,7 @@
 /**
  * (ɔ) Online FORMAPRO - GrCOTE7 -2022.
  */
-
-$letter = 'm';
+$letter = 'n';
 
 if (!function_exists('aff')) {
 	function aff($var, $txt = null)
@@ -24,10 +23,9 @@ function srn($n)
 	return str_repeat(' - ', $n);
 }
 
-function diamond(string $letter): array
+function diamond(string $letter): string
 {
-	echo '<h1 class="center">' . strtoupper($letter) . '</h1><hr>';
-	$letter = strtoupper($letter);
+	echo '<h1 class="center">' . ($letter = strtoupper($letter)) . '</h1><hr>';
 
 	$alpha = range('A', 'Z');
 	if (in_array($letter, $alpha)) {
@@ -42,17 +40,15 @@ function diamond(string $letter): array
 			++$i;
 		}
 		$arrL[] = srn($i) . $alpha[$k + 1] . srn($i) . '<br>';
-		++$i;
 
 		$arrH = $arrL;
 		array_shift($arrH);
 		$arrH = array_reverse($arrH);
-	} else {
-		$arrH = [];
-		$arrL = ['<p class="err">Seule une lettre doit-être donnée...</p>'];
+
+		return join('<br>', array_merge($arrH, $arrL));
 	}
 
-	return array_merge($arrH, $arrL);
+	return '<p class="err">Seule une lettre doit-être donnée...</p>';
 }
 
-echo join('<br>', diamond($letter));
+echo diamond($letter);
