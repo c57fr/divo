@@ -13,7 +13,7 @@ function diamond(string $letter): array
 	$k     = array_search($letter, $alpha);
 	// aff($k, 'Key.');
 	while ($k) {
-		echo $alpha[$k-1] . ' - ' . ($k*2-1) . '<br>';
+		echo $alpha[$k - 1] . ' - ' . ($k * 2 - 1) . '<br>';
 		--$k;
 	}
 
@@ -27,4 +27,4 @@ function diamond(string $letter): array
 }
 
 // aff(diamond('c'));
-diamond('e');
+diamond($letter);
