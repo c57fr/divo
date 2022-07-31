@@ -19,14 +19,15 @@ require_once './vendor/autoload.php';
 $loader = new \Twig\Loader\FilesystemLoader('./views');
 // On desactive le cache
 $twig = new \Twig\Environment($loader, [
-	'cache' => false,
-	'debug' => true,
+    'cache' => false,
+    'debug' => true,
 ]);
 
 include_once './parts/functions.php';
 
 include_once './parts/req.php';
 
+//2do Put MySQL code 4 DB in repository
 // On charge la vue Twig
 $template = $twig->load('./pages/page.htm');
 
@@ -34,8 +35,8 @@ $title = 'MySQL';
 
 // On rend notre vue en lui passant des variables si besoin
 echo $template->render(
-	[
-		'users' => $users,
-		'titre' => $title,
-	]
+    [
+        'users' => $users,
+        'titre' => $title,
+    ]
 );
