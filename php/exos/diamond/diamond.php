@@ -3,7 +3,7 @@
 /**
  * (ɔ) Online FORMAPRO - GrCOTE7 -2022.
  */
-$letter = 'n';
+$letter = 'f';
 
 if (!function_exists('aff')) {
 	function aff($var, $txt = null)
@@ -39,7 +39,7 @@ function diamond(string $letter): string
 			$arrL[] = srn($i) . $alpha[$k + 1] . srn($n - $i * 2) . $alpha[$k + 1] . srn($i) . '<br>';
 			++$i;
 		}
-		$arrL[] = srn($i) . $alpha[$k + 1] . srn($i) . '<br>';
+		$arrL[] = srn($i) . 'A' . srn($i) . '<br>';
 
 		$arrH = $arrL;
 		array_shift($arrH);
