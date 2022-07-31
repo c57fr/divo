@@ -3,6 +3,7 @@
 /**
  * (ɔ) Online FORMAPRO - GrCOTE7 -2022.
  */
+
 $letter = 'f';
 
 if (!function_exists('aff')) {
@@ -31,7 +32,7 @@ function diamond(string $letter): string
 	if (in_array($letter, $alpha)) {
 		$k = array_search($letter, $alpha);
 
-		$alpha = array_slice($alpha, 0, $k + 1);
+		// $alpha = array_slice($alpha, 0, $k + 1);
 
 		$n = ($k * 2 - 1); // Nbre de points
 		$i = 0;
