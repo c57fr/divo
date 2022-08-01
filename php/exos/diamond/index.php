@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diamond</title>
+
   <script>
   //<![CDATA[
   document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.27.10'><\/script>"
@@ -13,8 +14,12 @@
       "HOST", location.hostname));
   //]]>
   </script>
-  <!-- <link rel="stylesheet" href="/assets/css/style.css"> -->
-  <link rel="stylesheet" href="/divo/assets/css/style.css">
+
+  <?php
+  $ROOT = (('localhost' == $_SERVER['HTTP_HOST']) ? ('/' . explode('/', $_SERVER['REQUEST_URI'])[1]) : '');
+  echo '<link rel="stylesheet" href="' . $ROOT . '/assets/css/style.css">';
+  ?>
+
   <link rel="icon" href="/favicon.ico" type="image/icon">
   <link rel="shortcut icon" href="/animated_favicon.gif" type="image/x-icon">
 </head>
