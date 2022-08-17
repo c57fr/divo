@@ -1,0 +1,1 @@
+https://grafikart.fr/tutoriels/php-presentation-1112#autoplay
