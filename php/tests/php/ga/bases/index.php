@@ -1,12 +1,12 @@
 <?php
 
 /**
- * (ɔ) Online FORMAPRO - GrCOTE7 -2022.
+ * (ɔ) Online FORMAPRO - GrCOTE7 - 2022.
  */
 
 include_once '../functions/functions.php';
 
-function repondre_oui_non($q)
+function repondre_oui_non(string $q): bool
 {
 	while (true) {
 		$rep = readline($q);
