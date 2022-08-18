@@ -4,15 +4,18 @@
  * (ɔ) Online FORMAPRO - GrCOTE7 -2022.
  */
 
-$notes  = [];
+include_once '../functions/functions.php';
 
-while (true) {
-	$action = readline('Note ou \'f\' ? ');
-	if ('f' === $action) {
-		break;
+function repondre_oui_non($q)
+{
+	while (true) {
+		$rep = readline($q);
+		if ('n' === $rep) {
+			return false;
+		}
 	}
-	$notes[] = (int) $action;
 }
-foreach ($notes as $note) {
-	echo ' - ' . $note . "\n";
-}
+
+$resultat = repondre_oui_non('Voulez-vous continuer (o/n) ? ');
+
+var_dump($resultat);
