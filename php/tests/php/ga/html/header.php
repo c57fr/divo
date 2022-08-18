@@ -1,18 +1,6 @@
 <?php
 include '../functions/functions.php';
-function nav_item(string $file, string $title)
-{
-	$classe = 'nav-link';
-	if ($_SERVER['SCRIPT_NAME'] === '/php/tests/php/ga/html/' . $file) {
-		$classe .= ' active';
-	}
-
-	return <<<HTML
-  <li class="nav-item">
-    <a class="{$classe}" aria-current="page" href="./{$file}">{$title}</a>
-  </li>
-HTML;
-}
+include './functions/functions_menu.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -98,10 +86,7 @@ HTML;
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
-          <?php
-			echo nav_item('index.php', 'Accueil');
-echo nav_item('contact.php', 'Contact');
-?>
+          <?= nav_menu('nav-item') ?>
 
         </ul>
       </div>
