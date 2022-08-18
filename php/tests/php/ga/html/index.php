@@ -1,4 +1,7 @@
-<?php require 'header.php' ?>
+<?php
+$title='Accueil';
+require 'header.php' 
+?>
 
 <div class="container">
   
