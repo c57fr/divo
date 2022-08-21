@@ -1,12 +1,10 @@
 <?php
 
 /**
- * (ɔ) Online FORMAPRO - GrCOTE7 -2022.
+ * (ɔ) Online FORMAPRO - GrCOTE7 - 2022.
  */
 
-// aff(URI, 'URI');
-
-echo '<nav><a href=' . $uri . '>Accueil</a>';
+echo '<nav><a href=' . DMN . '>Accueil</a>';
 
 $links = ['Pier', 'Pol', 'Jack'];
 
