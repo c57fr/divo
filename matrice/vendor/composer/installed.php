@@ -3,7 +3,7 @@
         'name' => 'grcote7/matrice',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '1d02b2a4a4379a4de9084114ade3f7b1a9946c7f',
+        'reference' => '5d364dfcea756f129132f637d2f4134a5ab5bccc',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'grcote7/matrice' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '1d02b2a4a4379a4de9084114ade3f7b1a9946c7f',
+            'reference' => '5d364dfcea756f129132f637d2f4134a5ab5bccc',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
