@@ -1,13 +1,11 @@
 <?php
 
-die('Oki 21');
 /**
  * (ɔ) Online FORMAPRO - GrCOTE7 -2022.
  */
 
-const ROOT = './mysql/';
 // On charge l'autoload qui contient les packages de composer
-require_once './vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 // $loader = new \Twig\Loader\ArrayLoader([
 // 	'index' => "Hello, {{ name }}<br><br>
