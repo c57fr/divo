@@ -1,6 +1,6 @@
 {
-    "name": "grcote7/mysql",
-    "description": "MySQL use",
+    "name": "grcote7/matrice",
+    "description": "Matrice GC7",
     "autoload": {
         "psr-4": {
             "Grcote7\\Twig\\": "src/"
@@ -8,11 +8,11 @@
     },
     "authors": [
         {
-            "name": "Crea7Net",
+            "name": "GrCOTE7",
             "email": "l.cote@codeur.online"
         }
     ],
     "require": {
-        "twig/twig": "^3.0"
+        "twig/twig": "^3.4"
     }
 }
