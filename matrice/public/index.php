@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * (ɔ) Online FORMAPRO - GrCOTE7 -2022.
+ */
+
 include_once '../functions/functions.php';
 include_once '../functions/functions_menu.php';
 // On charge l'autoload qui contient les packages de composer
@@ -9,9 +13,9 @@ require_once '../vendor/autoload.php';
 $loader = new \Twig\Loader\FilesystemLoader('views');
 // On desactive le cache
 $twig = new \Twig\Environment($loader, [
-    'cache' => false,
-    'debug' => true,
-    ]);
+	'cache' => false,
+	'debug' => true,
+]);
 
 // On charge la vue Twig
 $template = $twig->load('./pages/home.twig');
@@ -20,7 +24,8 @@ $title = 'Home';
 
 // On rend notre vue en lui passant des variables si besoin
 echo $template->render(
-    [
-        'title' => $title,
-    ]
+	[
+		'title' => $title,
+		'nav'   => $nav,
+	]
 );
