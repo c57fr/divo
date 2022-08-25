@@ -1,0 +1,25 @@
+{% extends 'layouts/base.twig' %}
+{% set title= 'Jeu' %}
+
+{% block content %}
+
+<div class="container">
+  
+  {{ data|raw }}
+
+  <form action="./jeux/nbrex" method='GET' class="row g-3">
+
+    <div class="col-auto">
+      <input type="number" name="p" placeholder='Entre 0 et 1000'
+        class="form-control">
+    </div>
+
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-3">Devinez</button>
+    </div>
+
+  </form>
+
+</div>
+
+{% endblock %}

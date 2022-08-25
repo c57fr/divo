@@ -1,10 +1,10 @@
 {% extends 'layouts/base.twig' %}
-{% set title= 'Contact' %}
+{% set title= 'Amstrong' %}
 
 {% block content %}
 
 <div class="container">
-  Salut, {{ data }}.
+  {{ data|join('<br>')|raw }}
 </div>
 
 {% endblock %}

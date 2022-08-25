@@ -5,6 +5,7 @@
  */
 
 include_once '../functions/functions.php';
+include_once '../functions/router.php';
 include_once '../functions/functions_menu.php';
 // On charge l'autoload qui contient les packages de composer
 require_once '../vendor/autoload.php';
@@ -18,14 +19,12 @@ $twig = new \Twig\Environment($loader, [
 ]);
 
 // On charge la vue Twig
-$template = $twig->load('./pages/home.twig');
-
-// $title = 'Home';
+$template = $twig->load('./pages/' . $pagesup . '/' . $page . '.twig');
 
 // On rend notre vue en lui passant des variables si besoin
 echo $template->render(
 	[
-		// 'title' => $title,
-		'nav'   => $nav,
+		'nav'  => $nav,
+		'data' => $data ?? null,
 	]
 );

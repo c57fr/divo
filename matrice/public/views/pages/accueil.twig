@@ -1,0 +1,27 @@
+{% extends 'layouts/base.twig' %}
+{% set title= 'Accueil' %}
+
+{% block content %}
+<div class="container row">
+  <ul>
+    <li>
+      <a href='accueil'>Accueil</a>
+    </li>
+
+    <li>
+      <a href='jeux'>Jeux</a>
+      <ol>
+        <li><a href='jeux/amstrong'>Amstrong</a></li>
+        <li><a href='jeux/nbrex'>Jeu du nombre mystérieux</a></li>
+      </ol>
+
+    </li>
+    <li>
+      User
+    </li>
+    <li>
+      <a href='contact'>Contact</a>
+    </li>
+  </ul>
+</div>
+{% endblock %}

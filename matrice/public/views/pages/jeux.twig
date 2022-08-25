@@ -1,0 +1,19 @@
+{% extends 'layouts/base.twig' %}
+{% set title= 'Jeux' %}
+
+{% block content %}
+
+<div class="container">
+
+  <ul>
+    <li><a href='jeux/amstrong'>Amstrong</a></li>
+    <li><a href='jeux/nbrex'>Nombre Mystérieux</a></li>
+  </ul>
+
+  <div class="container">
+    {{ data|join('<br>')|raw }}
+  </div>
+  
+</div>
+
+{% endblock %}
