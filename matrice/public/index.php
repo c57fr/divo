@@ -20,12 +20,12 @@ $twig = new \Twig\Environment($loader, [
 // On charge la vue Twig
 $template = $twig->load('./pages/home.twig');
 
-$title = 'Home';
+// $title = 'Home';
 
 // On rend notre vue en lui passant des variables si besoin
 echo $template->render(
 	[
-		'title' => $title,
+		// 'title' => $title,
 		'nav'   => $nav,
 	]
 );
