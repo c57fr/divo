@@ -1,24 +1,24 @@
-{% extends 'layouts/base.htm' %}
-{% set title= 'Users' %}
+{% extends 'layouts/base.twig' %}
+{% set title= 'Utilisateurs' %}
+
+{% set arr=['Pier', 'Pol', 'Jack'] %}
 
 {% block content %}
 
-Salut, {{ firstname }}.
-<hr>
-
-<ul>
-  {% for arru in arr %}
-  <li>
-    {{ arru }}
-  </li>
-  {% endfor %}
-</ul>
-
-<hr>
-
-{{ arr | join(', ', ' & ') }}
-
-<hr>
+<div class="container">
+  
+  <ul>
+    {% for arru in arr %}
+    <li>
+      {{ arru }}
+    </li>
+    {% endfor %}
+  </ul>
+  
+  <hr>
+  
+  Le staff est composé de {{ arr | join(', ', ' & ') }}.
+  
+</div>
 
 {% endblock %}
-

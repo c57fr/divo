@@ -13,28 +13,34 @@ $validPages = [
 	'Accueil',
 	'Jeux',
 	'Amstrong',
-	'NbreX',
-	'User',
+	'Nbre_x',
+	'Users',
 	'Contact',
 ];
 
 $uri = explode('/', URI);
 // aff(count($uri), 'cpt()');
-$page = array_pop($uri) ?: 'accueil';
-$pagesup=(count($uri)>=3) ? array_pop($uri) : '';
+$page    = array_pop($uri) ?: 'accueil';
+$pagesup = (count($uri) >= 3) ? array_pop($uri) : '';
 // aff($pagesup);
 $page = parse_url($page, PHP_URL_PATH);
 $uri  = implode('/', $uri) . '/';
 
-$params = $_GET??null;
+$params = $_GET ?? null;
 
+aff($pagesup, 'PageSup');
+aff($page, 'Page');
 
-if ('jeux' == $pagesup) {
-	include '../controllers/traitement_jeux.php';
-}
+if (in_array(ucfirst($page), $validPages)) {
+	if ('jeux' == $pagesup) {
+		include '../controllers/traitement_jeux.php';
+	}
 
-if ('contact' == $page) {
-	$data = 'Johnny';
+	if ('contact' == $page) {
+		$data = 'Johnny';
+	}
+} else {
+	$page = '404';
 }
 
 // aff($params);
@@ -47,6 +53,4 @@ if ('contact' == $page) {
 // 	$page = '404';
 // }
 
-// aff($pagesup, 'PageSup');
-// aff($page, 'Page');
 // $affUri = '<p class="ar">URI : ' . URI . '</p>';

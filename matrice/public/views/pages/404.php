@@ -1,1 +1,0 @@
-<h1 class='error'>ERREUR 404</h1>
