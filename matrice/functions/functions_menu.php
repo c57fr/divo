@@ -16,14 +16,14 @@ function nav_item(string $title, string $linkClass = '')
 
 	return <<<HTML
     <li class="{$linkClass}">
-      <a class="{$classe}" aria-current="page" href="./{$link}">{$title}</a>
+      <a class="{$classe}" aria-current="page" href="{$link}">{$title}</a>
     </li>
 HTML;
 }
 
 function nav_menu(string $linkClass = ''): string
 {
-	return nav_item('Accueil', $linkClass) . nav_item('Jeux', $linkClass) . nav_item('Contact', $linkClass);
+	return nav_item('Jeux', $linkClass) . nav_item('Contact', $linkClass);
 }
 
 $nav = [

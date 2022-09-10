@@ -20,7 +20,6 @@ $twig = new \Twig\Environment($loader, [
 
 // On charge la vue Twig
 $template = $twig->load('./pages/' . $pagesup . '/' . $page . '.twig');
-// aff($page);
 
 // On rend notre vue en lui passant des variables si besoin
 echo $template->render(

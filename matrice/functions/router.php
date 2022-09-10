@@ -4,10 +4,12 @@
  * (ɔ) Online FORMAPRO - GrCOTE7 -2022.
  */
 
-define('DMN', dirname($_SERVER['SCRIPT_NAME']) . '/');
+define('DS', DIRECTORY_SEPARATOR);
+define('DMN', dirname($_SERVER['SCRIPT_NAME']) . DS);
 define('URI', strtolower($_SERVER['REQUEST_URI']));
-// aff(DMN, 'DMN');
-// aff(URI, 'URI');
+aff(DS, 'DS');
+aff(DMN, 'DMN');
+aff(URI, 'URI');
 
 $validPages = [
 	'Accueil',
@@ -31,7 +33,7 @@ $params = $_GET ?? null;
 aff($pagesup, 'PageSup');
 aff($page, 'Page');
 
-if (in_array(ucfirst($page), $validPages)) {
+if (in_array(ucfirst($page), $validPages) && is_file('views/pages/' . $pagesup . '/' . $page . '.twig')) {
 	if ('jeux' == $pagesup) {
 		include '../controllers/traitement_jeux.php';
 	}

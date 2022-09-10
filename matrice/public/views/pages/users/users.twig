@@ -8,9 +8,9 @@
 <div class="container">
   
   <ul>
-    {% for arru in arr %}
+    {% for k, arru in arr %}
     <li>
-      {{ arru }}
+      {{ k+1 }} - {{ arru }}
     </li>
     {% endfor %}
   </ul>
